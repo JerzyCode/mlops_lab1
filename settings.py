@@ -5,6 +5,7 @@ from pydantic import field_validator
 class Settings(BaseSettings):
     ENVIRONMENT: str
     APP_NAME: str
+    GEMINI_TOKEN: str
 
     @field_validator("ENVIRONMENT")
     @classmethod
