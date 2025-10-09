@@ -17,8 +17,8 @@ def health_check():
     return {"status": "ok"}
 
 
-@app.post("/predict", response_model=PredictResponse)
-def predict(request: PredictRequest):
+@app.post("/predict")
+def predict(request: PredictRequest) -> PredictResponse:
     prediction = predict_single(
         model,
         features=[
