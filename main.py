@@ -6,7 +6,7 @@ import os
 
 
 def export_envs(environment: str = "dev") -> None:
-    load_dotenv(f".env.{environment}")
+    load_dotenv(f".config/.env.{environment}")
 
 
 def load_secrets() -> None:
